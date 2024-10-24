@@ -2,15 +2,20 @@
 
 VM Aplication
 
-## Getting Started
+No projeto eu utilizei a arquitetura BLoC, ela foi escolhida para separar a lógica de negócios da
+interface, tornando o código mais organizado e escalável
 
-This project is a starting point for a Flutter application.
+flutter_bloc: Gerencia estados e separa a regra de negócio da ui.
 
-A few resources to get you started if this is your first Flutter project:
+provider: é uma simples injeção de dependência, tirando a necessidade de instânciar uma classe
+manualmente toda vez.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+google_fonts: para poder utilizar as fontes oficiais do google.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+equatable: Simplifica a comparação de objetos na arquitetura bloc sem precissar sobreescrever
+manualmente os métodos.
+
+test: para fazer testes e garantir a qualidade do código com testes automatizados.
+
+
+
