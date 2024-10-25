@@ -79,3 +79,27 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
+class CustomTitleWidget extends StatelessWidget {
+  const CustomTitleWidget({
+    super.key,
+    required this.title,
+    required this.fontSize,
+  });
+
+  final String title;
+  final double fontSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: GoogleFonts.poppins(
+        color: Colors.white,
+        fontWeight: FontWeight.w400,
+        fontSize: fontSize,
+      ),
+      textAlign: TextAlign.center,
+    );
+  }
+}

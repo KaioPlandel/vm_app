@@ -69,14 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Align(
                                 alignment: Alignment.topCenter,
-                                child: Text(
-                                  "Segure e arraste os itens para organizar os números em ordem crescente.",
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: lSize.width * 0.04,
-                                  ),
-                                  textAlign: TextAlign.center,
+                                child: CustomTitleWidget(
+                                  title: 'Segure e arraste os itens para organizar os números em ordem crescente.',
+                                  fontSize: lSize.width * 0.04,
                                 ),
                               ),
                               Align(
@@ -164,13 +159,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: EdgeInsets.symmetric(horizontal: lSize.width * 0.03),
                         child: Column(
                           children: [
-                            Text(
-                              "Insira a quantidade de números que deseja gerar, entre 1 e 100",
-                              style: GoogleFonts.poppins(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400,
-                                fontSize: lSize.width * 0.05,
-                              ),
+                            CustomTitleWidget(
+                              title: 'Insira a quantidade de números que deseja gerar, entre 1 e 100',
+                              fontSize: lSize.width * 0.05,
                             ),
                             SizedBox(height: lSize.width * 0.04),
                             Row(
@@ -257,6 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
             mColorBorder = Colors.red;
           }
           if (state is ExamGenerateNumbersSuccessState) {
+            mColorBorder = Colors.white;
             _mCountFocus.unfocus();
             _mCountTextController.clear();
             _mNumbers.clear();
